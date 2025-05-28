@@ -1,0 +1,48 @@
+.management-requests{
+   border:solid black 2px;
+}
+.management-requests .container-date{
+    display:flex;
+   justify-content: space-around;
+   align-items: center;
+}
+.management-requests .container-date input{
+    max-width: 150px;
+}
+.management-requests table{
+    width: 90%;
+    margin:auto;
+}
+
+.management-request .empty-message {
+    text-align: center;
+    color:red;
+}
+.score-total {
+    background-color: white;
+    width: 73%;
+    font-weight: bold;
+
+}
+.score-total p{
+    border:solid 1px black;
+    text-align:center;
+}
+.management-requests table{
+    margin-bottom:50px;
+}
+.management-requests .container-date .change-view {
+  
+            width: 80%;
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin: 20px 10%;
+            font-family: var(--title-font) !important;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--title-font-color);
+            background: var(--btn-color);
+            max-width: 200px;
+            max-height: 50px;
+        
+}

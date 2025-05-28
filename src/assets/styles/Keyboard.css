@@ -1,0 +1,27 @@
+ .character-container{
+   margin:auto;
+    max-width: 324px;
+    border:solid 2px black;
+    justify-items:center ;
+    padding: 5px;
+    gap: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+ }
+ .character-container .character{
+    width: 100px;
+    height: 100px;
+    border:solid 1px black;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+
+ }
+
+ .character-container .enter {
+   grid-column: span 3; /* O item ocupa 3 colunas */
+   justify-self: center; /* Centraliza o item dentro das 3 colunas */
+   width: 250px; /* Largura personalizada para o item */
+   height: 40px; /* Altura do item */
+ }

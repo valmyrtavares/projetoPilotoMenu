@@ -1,0 +1,48 @@
+@import "./variables.css";
+
+
+.container-nameform{
+    position: fixed;
+    top:20%;
+    left:15%;
+    width: 70%;
+    background-color:var(--secundary-bg-color) ;
+    padding:5%;
+}
+
+.container-nameform .goon-btn{ 
+        width: 80%;
+        border-radius: 10px;
+        padding: 10px 20px;
+        margin: 20px 10%;
+        font-family: var(--title-font) !important;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--title-font-color);
+        background: var(--btn-color);      
+}
+.container-nameform .close-btn-container{
+    display: flex;
+    justify-content: end;
+}
+.container-nameform .close-btn-container button{
+    background-color: var(--bg-color);
+    padding:5px 15px;
+    border: none;
+}
+.registration-promotion h4{
+    text-align: center;
+    font-size: 13px;
+    color: var(--title-font-color);
+    font-family: var(--title-font) !important;
+}
+.registration-promotion{
+    margin-top: 20px
+}
+.registration-promotion button{
+    max-width: 200px;
+}
+.registration-promotion .container-registration-btn{
+    display: flex;
+    justify-content: center;
+}

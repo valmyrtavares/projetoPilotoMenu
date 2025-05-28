@@ -1,0 +1,50 @@
+@import 'variables';
+.welcome-message{
+    padding:5px;
+}
+.welcome-message main{
+    padding: 5px;
+    border:solid 2px var(--title-font-color);
+    border-radius: 5%;
+    margin:10px 15px;
+}
+.welcome-message h1{
+    text-align: center;
+    color:var(--title-font-color);
+    font-family:var(--title-font);
+}
+.welcome-message p {
+    padding: 10px;
+    margin:0;
+    text-align:center;
+    font-family:var(--text-font);
+    color:var(--font-color);
+
+}
+.welcome-message .create-new-customer-btns{
+    display:flex;
+    justify-content: space-around;
+}
+.welcome-message .create-new-customer-btns button{
+    font-weight: bold;
+    color: var(--title-font-color);
+    background: var(--btn-color);
+    font-family: var(--title-font) !important; border-radius: 10px;
+    padding: 10px 14px;
+    margin: 20px 10%;
+    font-size:14px;
+}
+
+@media (min-width: 1000px) {
+    .welcome-message .create-new-customer-btns button {
+      font-size: 26px; /* Altera o font-size para 26px */
+    }
+  }
+.welcome-message .error-form{
+    color:#a11f1f;
+    font-weight: 700;
+}
+.welcome-message .cpf-input{
+    width: 80%;
+    margin:0px 10% 
+}

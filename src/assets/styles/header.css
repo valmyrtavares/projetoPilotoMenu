@@ -1,0 +1,53 @@
+.main_header nav{
+    position: relative;
+    width: 100%;
+    max-width: 100%; /* Ajuste conforme necessário */
+    height: auto;
+    overflow: hidden;    
+}
+.main_header .toten{
+    height: 5vh;
+}
+.main_header.toten nav {
+    height: 242px;
+    width: 261px;
+    position: relative;    
+    overflow: visible;
+    
+}
+.main_header.orderqueue nav {
+    /* Estilos específicos para o header quando a URL contém /orderqueue */
+    max-width: 650px; 
+    max-height: 100px;
+   
+     /* Exemplo: tamanho reduzido do logotipo */
+    /* Adicione outros estilos conforme necessário */
+  }
+  .main_header.toten nav img {
+      left: -10px;
+  }
+
+
+  .main_header.orderqueue nav img{
+max-width: 150px;
+transform: translate(337%, -17%);
+top: 20%;
+}
+
+.main_header nav img {
+    position: absolute;
+    top: 34%;
+    left: 33%;
+    transform: translate(36%, -53%);
+    max-width: 64%;
+    max-height: 62%;
+    width: auto;
+    height: auto;
+}
+.main_header nav::after{
+    content: '';
+    display: block;
+    padding-bottom: 25%;
+}
+
+

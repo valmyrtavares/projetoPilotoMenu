@@ -1,0 +1,11 @@
+@import 'variables.css';
+
+.button-profile{
+    padding: 4px 9px !important ;
+        border: none;
+        color:black;
+      
+}
+.registrated{
+    background-color: var(--btn-color);
+}

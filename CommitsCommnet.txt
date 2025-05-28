@@ -1,0 +1,90 @@
+It was created two new features about check out all documents and cancel some specific document
+
+ We are able to print the note from result.caminho_danfe
+
+ We have the screen of tax documents almost ready We list all the documents, we can cancel and print each one, and it was fixed the bug regard to debit card it was with the number wrong. and for now i need just update the list of documents in screen when a new documents was created 
+
+ list of tax documents are updated in screen 
+
+ The FiscalAttributes component was integrated in main branch
+
+ Today theres is no way to log out of an anonymous client because the local storage of the phone is never cleaned and this has caused many bugs in the system. Lide the same cliente who was logged in as an anonyous one wants to switch to legal client and cannot. Now when the client record does not exist, the local storage of this phone is cleared and it is forwarded to login screen
+
+ If was implemented a new feature about promotion
+
+ It was implemented a new feature of voucher promotion. For now we have one button in the kitchen screen that show if the customer is or not a register client . If not the label of button is writed client if In the case when the customer is regitred the label is the name of the client. If is a client the employ can click and give the descont of voucher, just if it is a register client, else there is no descont to this customer Eech client just can participate one turn of this promotion. 
+
+ It was created a eachCustomer component that show a sumary with all customer' s data and all dishes requested for him. In this screen still  is displayed the all requests's date done and the value of each one. This component stils this component still copy the phone number and anothers customer's data with one mouse click. The eachCustomer component is called inside of customerList component with one mouse click
+
+
+ In this commit we already have all costs and prifits in the requestManagementModule and the final line is in table's bottom. For now all we have only total price selled and amont of products of day, There is no stil total cost and total profit. In many previus commits unfortunily theres os no commnets here and therefore it is a good idea talk about some features done. In current time of project we already have a popup with each product, showing costs, profits and prices of each item and the sums of all
+
+ All totals params diplayed in screen of requestManagementModule component 
+
+ it was implemented a colunm discount in our requestManagementModule component This data is grabed from voucherPromotion and calculate in showDiscountsVoucher function 
+
+In the createCustomer component the input field birthday is a type-text and when it get focus the text keyboard turn avaiable to customer write your birthday date and it is not necessary use the defult windows keyboard that provided  one bad experience user 
+
+In the requestModal component we have a popup called WarningMessages, inside it I created a ternary option that if the customer is anonymous, I load a new screen asking if he doesn't want to get a discount and then we have two buttons. Either he cancels and the flow remains the same and nothing changes or he clicks on the register button and I get all the items from his request and store them in the customer's local storage, clear the main userMenu in the local storage and send it to the create-customer component where he should register and that's all for now
+
+The second part of this feature is complete. Now when the customer registers and returns to the system and he enters the order queue in the requestModal component, the system checks if there is a backorder in localstorage and loads it inside the backorder useState. And another useEffect with currentUser dependency is called. Remember that currentUser is the user id. When the currentUser is loaded, this useEffect calls updateingNewCustomer and passes the backorder useState as a parameter and the user receives the order items that were stored in localstorage and the flow continues. This new customer can come back to get new items or not. If he decides to finalize the order, the flow remains the same and since he is a new customer, the system allows the discount.
+
+In the customerList component was implemented a delete button to each customer. It waw also implemented with the DefaultCommumMessage a warning due exclude customer
+
+In the cusomer list screen that correspond to customerList component after delete some data, the screen is automatic updated
+
+It was added the ExpensesManagementList component and it has a root adress to show data and i'll start development of its features
+
+In this commit we finish the CRUD in ExpensesManagementList component with all is working
+
+It was fixed a bug regarding the fields form which was never clear and always was filled. I add a new function in the button of open modal and in this function i change the obj sent to  null and therefore when i click in this button all the fields are empty and i also change the input type text to input type select in the form and I did some adjustments in style of this input
+
+The totalExpensesValue function was implemented in the ExpensesManegementList component, which adds up all the values, both estimated and total, and places them in place of the screen button. In this case was used the generater html as a return of function with the data inside of it
+
+it was done the selfFlowManagement component very similar to requestManagementModule. It select two dates and filter all orders just is between that two dates, after that this date is sended to TableComponent and it show de each item separeated, the order's price and the discount in each request. And in this tableComponent all total payments are separated in categories like cash, debit, credite, and pix with each total number
+
+In the addExpensesForm component we added a new form to items with a lot of new fields. After filling them the system print a row of table with all data. This items are sent to DB within the main expense. In this approach we can have expenses with or without items. In case of payment of electric light or salary expenses there is no items in this casess
+
+In this commit I made a small change that is not so important, but it is worth explaining. I moved the input field of provider and account to the first group of fields. Because it doesn't make sense to fill these fields more than once. considering that all items have the sema provider and the same account
+
+I added two new buttons in the ExpensesManagementList component to register new providers and new products. All work was done in this component to allow to show the new popup. For now I copied the addExpensesForm cause there is a lot of similar procedeure between of them. Form now i have exactly the same component wiht another name. The new name is RegisterProvider component. I'm goint to work on it 
+
+The RegisterProvider component is done. It gets the data and print in your own talble with two input fields to add new provider and in each row of table there is one X to exclude the provider data. The CNPJ field has one formatter function and for now all is working. In this epecific case the popup doesn't close after the data is sended.If remains opened because all providers data is displayed in your own table. This table will be displayed after in select in the AddExpensesForm component
+
+RegisterProvider component was styled with module css
+
+The same process was done in RegisterProduct component
+
+The AddExpensesForm is receiving the provider and product data to show in the selects and when the amount field and CostPerUnit is filled the total coust field make the multiply between them. Right now I need that the value field be filled as the sum of all total cost items but it is the next step
+
+Improved and finished for now the SumaryExpensesPopup component 
+
+It was replaced the input type text in the form of  RecipeDishForm component to another one type select. Because I needed separate the amount, the name and the unit of measurement of each product. And I created instead of a array list with one string i created a array list with a object with name, amount and measurement of unit. Now the next step i am going to prepare the recipe field to receive these new format data
+
+In this commit The recipe modal called RecipeModal component screen was changed to receive the new data create in the new RecipeDishForm component
+
+For now, it is possible to edit and update our product inventory. The only value that can be edited is the total volume of each product. The expense value and the number of wrappers related to it are changed at the same time. A new product packaging column has been added that reflect a amont of packages of each product 
+
+In this commit all titles inside of a form is a return button to main menu's form
+
+This is a confusing commit because there is a lot of implementation. It is not a good path to follow, but I will leave it like this for now. In this commit we have the possibility to track all the records in stock about a new item purchased or a new edition of an ingredient whose quantity is not due to reality, and in this case the stock administrator must update the quantity of the ingredient in relation to the reality of the available quantity.
+
+In this point i get add and delete any item inside of all kind of lists in recipeDishForm component
+
+The recipeDishForm component loads the previous list of ingredients that were already registered in both scenarios
+
+It was fixed a bug regard a when the admin try to register the first time one ingredient
+
+In each request of certains dishes our Data base is receiving registers and right now we need to test, cause there are a lot of problems and bugs tha just should be fixed if and just if whole team use it and provide tests of usebility 
+
+A button that duplicates the item when clicked has been implemented in the requested item queue. This feature helps the customer to request the same item without having to repeat the entire request.
+
+It was done the AdminMainMenu which will have fix buttons to navigate between all admin componentes, becoming more confortable the change of functions in the admin with the use of outlet
+
+All buttons were implemented and login and logout function as well inside of the new menu admin . All is working and i am going start the styled of component 
+
+I encounter many problems regarding styling and css, such as styles leaking between components and at this point in the project I need to use variables, mixins and other things that make it easier the work within  html therefore i will create a new branch to preserv what was done 
+
+In this commit it was changed the customer's flow inside of app. right now the client find the menu with all dishes to choose and just in payment part is show the path to complete register and have access to many promotions or just give a fantasy name  to be user by our queue orders  
+
+for now the subHeaderCostumer component exist, but no longer possible ignore the intire  flow of system looking just for the separte parts. To go on with the implementation of MainPictuerComponent i will need draw one consistent flow of behavior between the isToten mode and the customer login and all the diferents scenarious which each path require. The so inevitable understanding is required right now. The good news is that this understanding already is implemented in currently home scneario just need copy it and understan it as well

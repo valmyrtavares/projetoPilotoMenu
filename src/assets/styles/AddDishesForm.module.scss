@@ -1,0 +1,79 @@
+@use './mixin' as *;
+@import "./adminStyleReuse.module.scss";
+
+
+
+.sidedishesRecipeBtnContainer{
+    margin-top: 40px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    button{
+        @include btnUtility;
+    }
+}
+.boxPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+
+    button {
+        @include btnAdmin
+    }
+}
+
+.uploadImage {
+    @include uploadImage;
+}
+
+.containerAddDishesForm{
+    background-color:$bgColorForm;
+    min-width:600px;
+    padding:3%;
+    .recipeModalContainer{
+       position:fixed;
+       width: 800px;
+       top:10%
+    }
+    form{
+        label{
+            font-size:$fontSizeFormLabel;
+        }
+        .hiddenInput {
+            display: none !important;
+        }
+        .checkInput{
+            display:flex;
+            justify-content:start;
+            align-items:center;
+            margin: 20px 0;
+            label{
+                font-size:$fontSizeForm;
+            }
+            
+            input[type="checkbox"] {
+                margin-right: 10px;
+            }
+        }
+        select {
+            font-size: $fontSizeForm !important;
+        }
+        
+        
+    }
+    .containerNewSideDishes{
+        background-color: $bgColorForm;
+        position: fixed;
+        top: 20%;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7);
+        border: 1px solid black;
+    }
+    .formButtonSubmit {
+        @include containerButtonSubmit;
+
+        button {
+            @include btnSubmit;
+        }
+    }
+}

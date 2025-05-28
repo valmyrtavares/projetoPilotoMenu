@@ -1,0 +1,104 @@
+.form-position {
+    position: relative;
+    top: 100px;
+    left: 3%; 
+    background-color: rgb(196, 184, 184);
+  
+}
+/* Retirar a condição de fixo desse pop porque limita o campo de atuação */
+/* .Edit-Add-Popup{
+    position: fixed;
+    top: 19px;
+    left:10%;
+    z-index:10;
+    width: 80%;
+    max-width: 700px;
+    background: rgb(229 229 229);
+} */
+.Edit-Add-Popup .close-btn{
+    display:flex;
+    justify-content: end;
+}
+.Edit-Add-Popup .close-btn button{
+    background-color: transparent;
+    border:none;
+    font-size: 20px
+}
+.Edit-Add-Popup .recipeModal-container{
+    position: fixed;
+    top:20%;
+    width: 60%;
+    max-width: 569px;
+    max-height: 50vh;
+
+}
+
+.Edit-Add-Popup  .sidedishes-recipe-btn-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top:30px;
+}
+
+.Edit-Add-Popup  .sidedishes-recipe-btn-container .recipe{
+    padding:2px 60px;
+}
+
+.Edit-Add-Popup {
+   max-height:800px;
+   overflow-y: auto;
+}
+
+.image-preview{
+   max-width: 60px;
+   overflow: hidden;
+}
+.custom-select {  
+    height: 100px;
+    /* Ajuste conforme necessário */
+    overflow: hidden;
+    /* Para evitar que as opções ultrapassem o tamanho do select */
+}
+
+.custom-select:focus {
+    overflow: hidden;
+    /* Habilita o scroll no dropdown */
+}
+
+.container-new-sideDishes{
+    position:fixed;
+    top: 20%;
+    left:10%;
+    max-height: 80vh;
+    overflow-y:auto;
+    width: 80%;
+    border:solid 2px var(--secundary-bg-color);
+    background:white;
+    max-width: 450px;
+}
+
+.box-price{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box-price div label{
+margin:0;
+}
+.box-price button{
+    max-height: 64px;
+    border-radius: 9px;
+    padding: 10px 17px;
+}
+.external-container-customize-price{
+    position:fixed;
+    top:50px;
+    width:84%;
+    margin:10px 6%;
+    max-width: 450px;
+}
+
+.sidedishes-btn-container{
+    display:flex;
+    justify-content: space-around;
+}
+

@@ -1,0 +1,109 @@
+@import './adminStyleReuse.module.scss';
+
+/* Estilo do container principal */
+.recipeGlobalContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $bg-admin-default;
+    color: var(--font-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 1000;
+
+    .btnContainer {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+    }
+}
+
+/* Barra de rolagem personalizada */
+.recipeGlobalContainer::-webkit-scrollbar {
+    width: 10px;
+}
+
+.recipeGlobalContainer::-webkit-scrollbar-thumb {
+    background-color: var(--secundary-bg-color);
+    border-radius: 10px;
+}
+
+.recipeGlobalContainer::-webkit-scrollbar-thumb:hover {
+    background-color: var(--btn-color);
+}
+
+/* Botão de fechar */
+.btnContainer button {
+    background-color: var(--btn-color);
+    color: var(--font-color);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btnContainer button:hover {
+    background-color: var(--secundary-bg-color);
+    color: var(--btn-color);
+}
+
+/* Conteúdo da receita */
+.currentRecipe {
+    font-family: var(--text-font);
+}
+
+h3,
+h4 {
+    font-family: var(--title-font);
+    color: $admin-title-color;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin: 5px 0;
+    padding: 5px;
+    background-color:$btn-admin-table-color;
+    border-radius: 5px;
+}
+
+/* Container de imagem */
+.imageRecipeContainer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.imageRecipeContainer img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mensagem sem receita */
+.noRecipe {
+    text-align: center;
+    font-style: italic;
+    color: $admin-title-color;
+}
+
+.titleRecipe {
+    font-size: 30px;
+}
+
+.recipeText {
+    font-size: 18px;
+}

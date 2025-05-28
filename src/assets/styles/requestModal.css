@@ -1,0 +1,120 @@
+@import 'variables';
+
+.container-modal-request {
+    min-height: 75vh;
+}
+
+.current-client {
+    text-align: center;
+    font-size: 22px;
+}
+
+.current-client span {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.individual-dishes {
+    display: grid;
+    grid-template-columns: 5fr 2fr 2fr 2fr 1fr;
+    column-gap: 30px;
+    justify-items: center;
+    max-width: 80%;
+    padding: 9px 5px;
+    margin: 5px 10% 5px 10%;
+    border: solid 1px var(--secundary-bg-color);
+    align-items: center;
+    border-radius: 10px;
+}
+.individual-dishes .cancel {
+    cursor: pointer;
+}
+.individual-dishes button{
+    background:none;
+    border:none;
+    font-size: 35px;
+}
+
+h3 {
+    text-align: center;
+    font-family: var(--font-title);
+    color: var(--title-font-color);
+    font-size: 19px;
+    font-weight: 700;
+}
+
+@media (min-width: 1000px) {
+    h3 {
+      font-size: 34px; /* Altera o font-size para 26px */
+    }
+  }
+
+.individual-dishes h2 {
+    font-size: 16px;
+    color: var(--title-font-color);
+    font-family: var(--font-title);
+}
+
+.dishes-price {
+    font-weight: 700;
+    font-size: 15px;
+    color: black;
+    margin: 0;
+}
+
+.status-request-pend {
+    font-size: 11px;
+    color: red;
+    margin: 0;
+}
+
+.individual-dishes p {
+    background-color: transparent;
+    color: var(--font-color);
+    font-family: var(--text-font);  
+    margin-bottom: 0;
+}
+
+.no-request {
+    text-align: center;
+    color: #8d1a1a;
+    margin-top: 200px;
+    font-size: 25px;
+}
+.btnFinalRequest{
+    display: flex;
+    justify-content: center;
+}
+.btnFinalRequest .keep-shopping, 
+.btnFinalRequest .send-request {
+    width: 80%;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 20px 10%;
+    font-family: var(--title-font) !important;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--title-font-color);
+    background: var(--btn-color);
+}
+
+@media (min-width: 1000px) {
+    .individual-dishes h2{
+        font-size: 27px;        
+    }
+    .status-request-pend {
+        font-size: 27px;
+    }
+    .dishes-price {  
+        font-size: 27px;        
+    }
+    .cancel {  
+        font-size: 27px;
+        
+    }
+    .individual-dishes {  
+        border: solid 5px var(--secundary-bg-color);   
+    }
+}

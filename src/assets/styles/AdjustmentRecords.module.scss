@@ -1,0 +1,15 @@
+@import './adminStyleReuse.module.scss';
+
+.containderAdjustmentRecords{
+    position: relative;
+  
+    width: 100%;
+    height: 80vh;
+    background: $bg-admin-default;
+    height: 80vh;
+    overflow-y: auto;
+
+    .containderAdjustmentRecordsTable{        
+        @include tableContainer
+    }
+}

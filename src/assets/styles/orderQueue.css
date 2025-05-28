@@ -1,0 +1,83 @@
+@import  "./variables";
+
+.order-queue-container .title-btn-container{
+    display:grid;
+    grid-template-columns: 8fr 46px;
+    justify-content: space-between;
+}
+.order-queue-container .title-btn-container a{
+    color:var(--title-font-color);
+    font-size: 22px;;
+}
+
+.order-queue-container .title-btn-container h1{
+text-align: center;
+font-family: var(--title-font);
+color: var(--title-font-color);
+font-size:33px;
+}
+
+.order-queue-container .list-columns h3{
+    font-size:23px;
+    margin:0px;
+}
+
+.order-queue-container .list-columns .horizont-line-queue {
+    display:flex; 
+    justify-content: space-around;
+    padding: 5px;
+    margin-bottom: 3px;
+   
+}
+.order-queue-container .list-columns .horizont-line-queue p{
+    font-size: 20px;    
+}
+
+.order-queue-container p{
+    text-align: center;
+    font-family: var(--text-font);
+    color:var(--font-color);
+    font-size:15px;
+}
+@media (min-width: 600px) {
+    .order-queue-container p{    
+        font-size:20px;   
+    }
+    .order-queue-container .title-btn-container h1 {
+        font-size:42px
+    }
+}
+
+.order-queue-container .horizont-line-queue p{
+    margin-bottom: 0;
+}
+.order-queue-container .horizont-line-queue span{
+    font-weight: bold;
+}
+.order-queue-container span{
+    font-weight: bold;
+}
+.order-queue-container .list-columns{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;   
+}
+.order-queue-container .list-columns .date{
+    margin-bottom: 0;
+}
+
+.order-queue-container .list-columns .border-red{
+    border: solid 2px red;
+    margin: 5px;
+}
+
+.order-queue-container .list-columns .border-green{
+    border: solid 2px green;
+    margin: 5px;
+}
+
+/* *********************ANIMAÇÃO **************************** */
+
+/* Animação para itens que estão saindo da lista */
+
+  
