@@ -28,16 +28,14 @@
     "web-vitals": "^2.1.4",
     "xlsx": "^0.18.5"
   },
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d docs",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "clean": "rm -rf docs",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "proxy-server": "node proxyServer.js"
-  },
+"scripts": {
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "clean": "rm -rf docs",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject",
+  "proxy-server": "node proxyServer.js"
+},
   "eslintConfig": {
     "extends": [
       "react-app",
