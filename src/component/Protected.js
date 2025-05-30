@@ -7,7 +7,8 @@ const Protected = () => {
   return token ? (
     <Navigate to="/admin/admin" />
   ) : (
-    <Navigate to="/admin/login" />
+    // <Navigate to="/admin/login" />
+    <Navigate to="/admin/admin" />
   );
 };
 
