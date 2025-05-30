@@ -174,7 +174,7 @@ function MainMenu() {
             ))}
         </div>
       </div>
-      <Link to="/admin">
+      <Link to="/admin/admin">
         <div className={style.footer}></div>
       </Link>
     </>

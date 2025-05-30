@@ -107,7 +107,7 @@ function App() {
         <Route path="/admin/login" element={<Login />} />
         <Route path="/admin/check-customer-nolog" element={<NoLog />} />
         <Route path="/admin/signup" element={<Signup />} />
-        {/* <Route path="/admin" element={<Protected />} /> */}
+        <Route path="/admin" element={<Protected />} />
         <Route path="/admin/signup" element={<Signup />} />
         {/* <Route path="/admin/admin" element={<Admin />} /> */}
         <Route path="/admin/*" element={<AdminMainMenu />}>
