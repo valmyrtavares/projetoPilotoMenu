@@ -32,8 +32,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d docs",
     "start": "react-scripts start",
-    "clean": "rm -rf docs && mkdir docs",
-    "build": "react-scripts build && npm run clean && mv build/* docs/",
+    "build": "react-scripts build",
+    "clean": "rm -rf docs",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "proxy-server": "node proxyServer.js"
