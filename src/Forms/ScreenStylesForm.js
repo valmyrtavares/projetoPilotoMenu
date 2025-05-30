@@ -30,7 +30,7 @@ function ScreenStylesForm() {
     async function getSytylesData() {
       const data = await getBtnData('styles');
       console.log(data);
-      setForm(data[1]);
+      setForm(data[0]);
     }
     getSytylesData();
   }, []);

@@ -1,20 +1,23 @@
+// Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: 'AIzaSyC7sJ3wQY40ZXNvwn-QcbNr51R1Gjui_1E',
-  authDomain: 'react-bar-67f33.firebaseapp.com',
-  databaseURL: 'https://react-bar-67f33-default-rtdb.firebaseio.com',
-  projectId: 'react-bar-67f33',
-  storageBucket: 'react-bar-67f33.appspot.com',
-  messagingSenderId: '621276654255',
-  appId: '1:621276654255:web:c90ba2bc75df7ae1edc25a',
+  apiKey: 'AIzaSyB7bvkvqDzmRVZWLADteuNQM4AMHkYre_o',
+  authDomain: 'projetopilotomenu.firebaseapp.com',
+  projectId: 'projetopilotomenu',
+  storageBucket: 'projetopilotomenu.appspot.com',
+  messagingSenderId: '307443442433',
+  appId: '1:307443442433:web:888d3d72ad91a8b9e03100',
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+const db = getFirestore(app);
 const storage = getStorage(app);
 
-export { app, auth, storage };
+export { app, db, storage };

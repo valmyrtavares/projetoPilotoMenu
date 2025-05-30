@@ -2,7 +2,7 @@ import React from 'react';
 import Input from '../../component/Input.js';
 import '../../assets/styles/form.css';
 import Title from '../../component/title.js';
-import { auth } from '../../config-firebase/firebase.js';
+// import { auth } from '../../config-firebase/firebase.js';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 
@@ -22,7 +22,7 @@ function Signup() {
     event.preventDefault();
     try {
       const userCredential = await createUserWithEmailAndPassword(
-        auth,
+        // auth,
         form.email,
         form.password
       );

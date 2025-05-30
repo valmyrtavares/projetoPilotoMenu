@@ -1,6 +1,6 @@
-import React, { useEffect, useContext } from "react";
-import { GlobalContext } from "./GlobalContext";
-import { getBtnData } from "./api/Api";
+import React, { useEffect, useContext } from 'react';
+import { GlobalContext } from './GlobalContext';
+import { getBtnData } from './api/Api';
 
 const StyleProvider = ({ children }) => {
   const { setStyles } = useContext(GlobalContext);
@@ -10,7 +10,7 @@ const StyleProvider = ({ children }) => {
     for (const [key, value] of Object.entries(stylesObj)) {
       const cssVariableName = `--${key
         .trim()
-        .replace(/([A-Z])/g, "-$1")
+        .replace(/([A-Z])/g, '-$1')
         .toLowerCase()}`;
       cssVariables[cssVariableName] = value;
     }
@@ -20,8 +20,8 @@ const StyleProvider = ({ children }) => {
   useEffect(() => {
     async function fetchStyles() {
       try {
-        const data = await getBtnData("styles");
-        const stylesObj = data[1]; // Certifique-se de que o data[1] realmente contém o objeto de estilos
+        const data = await getBtnData('styles');
+        const stylesObj = data[0]; // Certifique-se de que o data[1] realmente contém o objeto de estilos
 
         setStyles(stylesObj);
         const cssVariables = convertToCSSVariables(stylesObj);
@@ -30,7 +30,7 @@ const StyleProvider = ({ children }) => {
           document.documentElement.style.setProperty(key, value);
         }
       } catch (error) {
-        console.error("Error fetching styles:", error);
+        console.error('Error fetching styles:', error);
       }
     }
     fetchStyles();

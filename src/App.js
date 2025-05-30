@@ -42,6 +42,7 @@ import FiscalAttributes from './component/Request/FiscalAttributes';
 import MainPictureMenu from './Pages/MainPictureMenu';
 import { getOneItemColleciton } from './api/Api';
 import { GlobalContext } from './GlobalContext.js';
+import ExcelUploader from './Forms/excelUploader.js';
 
 import './style.css';
 import ManagementRecipes from './component/Recipes/ManagementRecipes';
@@ -93,13 +94,12 @@ function App() {
         <Route path="/create-customer" element={<CreateCustomer />} />
         <Route path="/request" element={<RequestModal />} />
         <Route path="/orderqueue" element={<OrderQueue />} />
-
+        <Route path="/excel" element={<ExcelUploader />} />
+        {/*  route should be */}
         <Route path="/nfce" element={<FiscalAttributes />} />
         <Route path="/print" element={<PrintRequestCustomer />} />
         {/* <Route path="/admin/editButton" element={<EditFormButton />} /> */}
-
         <Route path="/admin/recipedish" element={<RecipeDish />} />
-
         {/* <Route
             path="/admin/SideDisehsInDishes"
             element={<NoNameSideDisehsInDishes />}
@@ -129,7 +129,6 @@ function App() {
           <Route path="requestlistcheck" element={<RequestList />} />
           <Route path="managementRecipes" element={<ManagementRecipes />} />
         </Route>
-
         {/* <Route path="*" element={<Navigate to="/bar-menu.io" replace />} /> */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

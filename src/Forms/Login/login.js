@@ -2,7 +2,7 @@ import React from 'react';
 import Input from '../../component/Input.js';
 import '../../assets/styles/form.css';
 import Title from '../../component/title.js';
-import { auth } from '../../config-firebase/firebase.js';
+// import { auth } from '../../config-firebase/firebase.js';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { GlobalContext } from '../../GlobalContext';
 import { useNavigate } from 'react-router-dom';
@@ -121,7 +121,7 @@ function Login() {
     event.preventDefault();
     try {
       const userCredential = await signInWithEmailAndPassword(
-        auth,
+        // auth,
         form.email,
         form.password
       );
