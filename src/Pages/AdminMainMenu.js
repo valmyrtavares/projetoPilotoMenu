@@ -2,6 +2,7 @@ import React from 'react';
 import admin from '../assets/styles/AdminMainMenu.module.scss';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import WarningMessage from '../component/WarningMessages';
+import { modulesConfig } from '../modelConfig.ts';
 
 const AdminMainMenu = ({ children }) => {
   const navigate = useNavigate();
@@ -98,24 +99,26 @@ const AdminMainMenu = ({ children }) => {
             >
               Edite seus acompanhamentos
             </NavLink>
-
-            <NavLink
-              to="/admin/stock"
-              className={({ isActive }) =>
-                isActive ? `${admin.link} ${admin.active}` : admin.link
-              }
-            >
-              Estoque
-            </NavLink>
-
-            <NavLink
-              to="/admin/customer"
-              className={({ isActive }) =>
-                isActive ? `${admin.link} ${admin.active}` : admin.link
-              }
-            >
-              Lista de Clientes
-            </NavLink>
+            {modulesConfig.modules.TrackStockProduct && (
+              <NavLink
+                to="/admin/stock"
+                className={({ isActive }) =>
+                  isActive ? `${admin.link} ${admin.active}` : admin.link
+                }
+              >
+                Estoque
+              </NavLink>
+            )}
+            {modulesConfig.modules.customerList && (
+              <NavLink
+                to="/admin/customer"
+                className={({ isActive }) =>
+                  isActive ? `${admin.link} ${admin.active}` : admin.link
+                }
+              >
+                Lista de Clientes
+              </NavLink>
+            )}
             <NavLink
               to="/admin/operationCost"
               className={({ isActive }) =>
@@ -124,15 +127,16 @@ const AdminMainMenu = ({ children }) => {
             >
               Cadastro de Custo de Operações
             </NavLink>
-
-            <NavLink
-              to="/admin/managementRecipes"
-              className={({ isActive }) =>
-                isActive ? `${admin.link} ${admin.active}` : admin.link
-              }
-            >
-              Receitas
-            </NavLink>
+            {modulesConfig.modules.ManagementRecipes && (
+              <NavLink
+                to="/admin/managementRecipes"
+                className={({ isActive }) =>
+                  isActive ? `${admin.link} ${admin.active}` : admin.link
+                }
+              >
+                Receitas
+              </NavLink>
+            )}
 
             <NavLink
               to="/admin/request"
@@ -188,14 +192,16 @@ const AdminMainMenu = ({ children }) => {
             >
               Saudação inicial
             </NavLink>
-            <NavLink
-              to="/admin/promotions"
-              className={({ isActive }) =>
-                isActive ? `${admin.link} ${admin.active}` : admin.link
-              }
-            >
-              Promoções
-            </NavLink>
+            {modulesConfig.modules.Promotions && (
+              <NavLink
+                to="/admin/promotions"
+                className={({ isActive }) =>
+                  isActive ? `${admin.link} ${admin.active}` : admin.link
+                }
+              >
+                Promoções
+              </NavLink>
+            )}
 
             <NavLink
               to="/admin/requestlist"
