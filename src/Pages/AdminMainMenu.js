@@ -109,7 +109,7 @@ const AdminMainMenu = ({ children }) => {
                 Estoque
               </NavLink>
             )}
-            {modulesConfig.modules.customerList && (
+            {modulesConfig.modules.CustomerList && (
               <NavLink
                 to="/admin/customer"
                 className={({ isActive }) =>
@@ -119,14 +119,16 @@ const AdminMainMenu = ({ children }) => {
                 Lista de Clientes
               </NavLink>
             )}
-            <NavLink
-              to="/admin/operationCost"
-              className={({ isActive }) =>
-                isActive ? `${admin.link} ${admin.active}` : admin.link
-              }
-            >
-              Cadastro de Custo de Operações
-            </NavLink>
+            {modulesConfig.modules.OperationCostRegister && (
+              <NavLink
+                to="/admin/operationCost"
+                className={({ isActive }) =>
+                  isActive ? `${admin.link} ${admin.active}` : admin.link
+                }
+              >
+                Cadastro de Custo de Operações
+              </NavLink>
+            )}
             {modulesConfig.modules.ManagementRecipes && (
               <NavLink
                 to="/admin/managementRecipes"
@@ -137,25 +139,26 @@ const AdminMainMenu = ({ children }) => {
                 Receitas
               </NavLink>
             )}
-
-            <NavLink
-              to="/admin/request"
-              className={({ isActive }) =>
-                isActive ? `${admin.link} ${admin.active}` : admin.link
-              }
-            >
-              Vendas
-            </NavLink>
-
-            <NavLink
-              to="/admin/sell-flow"
-              className={({ isActive }) =>
-                isActive ? `${admin.link} ${admin.active}` : admin.link
-              }
-            >
-              Fechamento de Caixa
-            </NavLink>
-
+            {modulesConfig.modules.RequestManagementModule && (
+              <NavLink
+                to="/admin/request"
+                className={({ isActive }) =>
+                  isActive ? `${admin.link} ${admin.active}` : admin.link
+                }
+              >
+                Vendas
+              </NavLink>
+            )}
+            {modulesConfig.modules.SellFlowMangement && (
+              <NavLink
+                to="/admin/sell-flow"
+                className={({ isActive }) =>
+                  isActive ? `${admin.link} ${admin.active}` : admin.link
+                }
+              >
+                Fechamento de Caixa
+              </NavLink>
+            )}
             <NavLink
               to="/admin/frontimage"
               className={({ isActive }) =>
@@ -164,16 +167,16 @@ const AdminMainMenu = ({ children }) => {
             >
               Adicione sua marca
             </NavLink>
-
-            <NavLink
-              to="/admin/expenses"
-              c
-              className={({ isActive }) =>
-                isActive ? `${admin.link} ${admin.active}` : admin.link
-              }
-            >
-              Despesas
-            </NavLink>
+            {modulesConfig.modules.ExpensesManegementList && (
+              <NavLink
+                to="/admin/expenses"
+                className={({ isActive }) =>
+                  isActive ? `${admin.link} ${admin.active}` : admin.link
+                }
+              >
+                Despesas
+              </NavLink>
+            )}
 
             <NavLink
               to="/admin/styles"
@@ -183,15 +186,16 @@ const AdminMainMenu = ({ children }) => {
             >
               Gerenciando Estilos
             </NavLink>
-
-            <NavLink
-              to="/admin/welcome"
-              className={({ isActive }) =>
-                isActive ? `${admin.link} ${admin.active}` : admin.link
-              }
-            >
-              Saudação inicial
-            </NavLink>
+            {modulesConfig.modules.WelcomeSaluteForm && (
+              <NavLink
+                to="/admin/welcome"
+                className={({ isActive }) =>
+                  isActive ? `${admin.link} ${admin.active}` : admin.link
+                }
+              >
+                Saudação inicial
+              </NavLink>
+            )}
             {modulesConfig.modules.Promotions && (
               <NavLink
                 to="/admin/promotions"
