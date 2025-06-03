@@ -8,6 +8,7 @@ import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import {
   getFirestore,
   collection,
+  updateDoc,
   addDoc,
   setDoc,
   doc,
@@ -163,10 +164,14 @@ function AddDishesForm({ dataObj, mainTitle, setModalEditDishes }) {
           console.log(error);
         });
     } else {
-      setDoc(doc(db, 'item', dataObj.id), form)
+      const formWithoutUndefined = Object.fromEntries(
+        Object.entries(form).filter(([_, value]) => value !== undefined)
+      );
+
+      updateDoc(doc(db, 'item', dataObj.id), formWithoutUndefined)
         .then(() => {
           navigate('/');
-          console.log('Document successfully updated !');
+          console.log('Document successfully updated!');
         })
         .catch((error) => {
           console.log(error);
