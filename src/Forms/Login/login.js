@@ -1,8 +1,8 @@
 import React from 'react';
 import Input from '../../component/Input.js';
 import '../../assets/styles/form.css';
+import style from '../../assets/styles/Login.module.scss';
 import Title from '../../component/title.js';
-// import { auth } from '../../config-firebase/firebase.js';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../config-firebase/firebase.js';
 import { GlobalContext } from '../../GlobalContext';
@@ -139,6 +139,9 @@ function Login() {
 
   return (
     <div className="container mt-5 p-3 bg-body-tertiar">
+      <div className={style.containerCloseBtn}>
+        <button onClick={() => navigate('/')}>X</button>
+      </div>
       <Title mainTitle="Login Administrador" />
       {errorMessage && (
         <Error

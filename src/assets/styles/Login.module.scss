@@ -1,0 +1,16 @@
+.containerCloseBtn{
+    display:flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+   button{
+    padding:2%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size:large;
+    color: white;
+    &:hover{
+        background-color: #8ca019;
+    }
+   } ;
+}
