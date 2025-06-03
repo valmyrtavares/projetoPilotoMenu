@@ -1,40 +1,70 @@
-.containerCloseBtn{
-    display:flex;
-    justify-content: flex-end;
-    margin-right: 20px;
-   button{
-    padding:2%;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size:large;
-    color: white;
-    &:hover{
-        background-color: #8ca019;
-    }
-   } ;
-}
-.registerContainer{
-    display: flex;
-   align-items: center;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    color:white;
-    p{
-        margin: 0 10px;
-    }
-    button{
-        padding: 10px 20px;
-        color: white;
-        background-color: transparent;
-        border:none
-    }
+@use './mixin' as *;
+@import "./adminStyleReuse.module.scss";
 
-}
-.MainloginContainer{
-    position: fixed; // Fixa em relação à tela, não à rolagem
-    top: 300px;
+.loginContainer{
+    width: 100%;
+    margin: 0 auto;
+    background-color: $bgColorForm;
+    padding: 3%;
+    .containerCloseBtn{
+        display:flex;
+        justify-content: flex-end;
+        margin-right: 20px;
+       button{
+        padding:2%;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size:large;
+        color: white;
+        &:hover{
+            background-color: #8ca019;
+        }
+       } ;
+    }
+    .MainloginContainer {
+        position: fixed; // Fixa em relação à tela, não à rolagem
+        top: 300px;
         left: 40%;
+    }
+    form{
+        label {
+                font-size: $fontSizeFormLabel;
+            }
+            .formButtonSubmit {
+                @include containerButtonSubmit;
+                button {
+                    @include btnSubmit;
+                }
+            }
+        }
+        .registerContainer{
+            display: flex;
+            align-items: center;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            color:$admin-title-color;
+        
+        p{
+            margin: 0 10px;
+        }
+        button{
+            padding: 10px 20px;
+            color: $admin-title-color;
+            background-color: transparent;
+            font-weight: bold;
+            border:none
+        }
+    
+    }
+ 
+        .formButtonSubmit {
+            @include containerButtonSubmit;
+    
+            button {
+                @include btnSubmit;
+            }  
+        }
 }

@@ -140,7 +140,7 @@ function Login() {
   };
 
   return (
-    <div className="container mt-5 p-3 bg-body-tertiar">
+    <div className={style.loginContainer}>
       <div className={style.containerCloseBtn}>
         <button onClick={() => navigate('/')}>X</button>
       </div>
@@ -160,7 +160,7 @@ function Login() {
           />
         )}
       </div>
-      <form onSubmit={handleSubmit} className="m-1">
+      <form onSubmit={handleSubmit}>
         <Input
           id="email"
           label="email"
@@ -194,12 +194,13 @@ function Login() {
             closeKeyboard={() => closeKeyboard(form.password, 'password')}
           />
         )}
-
-        <button className="btn btn-primary">Enviar</button>
+        <div className={style.formButtonSubmit}>
+          <button>Enviar</button>
+        </div>
       </form>
       <div className={style.registerContainer}>
         <p>Não tem uma conta? </p>
-        <button onClick={() => setRegister(true)}>Registrar</button>
+        <button onClick={() => setRegister(true)}>Registre-se</button>
       </div>
     </div>
   );
