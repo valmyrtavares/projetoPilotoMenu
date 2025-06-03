@@ -1,6 +1,7 @@
 export const modulesConfig = {
   id: 'cliente2',
   name: 'Restaurante do João',
+  MainAdmin: 'luxEthernal',
   modules: {
     Promotions: false, //Promoção
     CustomerList: false, //Lista de Clientes

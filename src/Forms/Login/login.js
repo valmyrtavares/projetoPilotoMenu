@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import Error from '../../component/error.js';
 import TextKeyboard from '../../component/Textkeyboard.js';
 import useFormValidation from '../../Hooks/useFormValidation.js';
+import MainLogin from './MainLogin.js';
 
 function Login() {
   const navigate = useNavigate();
@@ -17,6 +18,7 @@ function Login() {
   const [errorMessage, setErrorMessage] = React.useState(false);
   const [showNameKeyboard, setShowNameKeyboard] = React.useState(false);
   const [showEmailKeyboard, setShowEmailKeyboard] = React.useState(false);
+  const [register, setRegister] = React.useState(false);
   const [showPasswordlKeyboard, setShowPasswordKeyboard] =
     React.useState(false);
   const global = React.useContext(GlobalContext);
@@ -149,6 +151,15 @@ function Login() {
           error={{ login: 'Sua senha ou email estão incorretos' }}
         />
       )}
+      <div className={style.MainloginContainer}>
+        {register && (
+          <MainLogin
+            setErrorPopup={setRegister}
+            error={{ register: 'Você precisa registrar uma conta' }}
+            setClose={setRegister}
+          />
+        )}
+      </div>
       <form onSubmit={handleSubmit} className="m-1">
         <Input
           id="email"
@@ -186,6 +197,10 @@ function Login() {
 
         <button className="btn btn-primary">Enviar</button>
       </form>
+      <div className={style.registerContainer}>
+        <p>Não tem uma conta? </p>
+        <button onClick={() => setRegister(true)}>Registrar</button>
+      </div>
     </div>
   );
 }
